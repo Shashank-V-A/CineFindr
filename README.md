@@ -14,10 +14,9 @@ A full-stack, multilingual movie and TV series recommendation platform built wit
 
 ## 🚀 Live Demo
 
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shashank-V-A/movie-recommender)
+[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shashank-V-A/CineFindr)
 
-**Frontend**: [https://cinefindr.vercel.app](https://cinefindr.vercel.app)  
-**Backend API**: [https://cinefindr-api.railway.app](https://cinefindr-api.railway.app)
+**Live Application**: [https://cinefindr.vercel.app](https://cinefindr.vercel.app)
 
 ## 🛠 Tech Stack
 
@@ -65,8 +64,8 @@ A full-stack, multilingual movie and TV series recommendation platform built wit
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Shashank-V-A/movie-recommender.git
-   cd movie-recommender
+   git clone https://github.com/Shashank-V-A/CineFindr.git
+   cd CineFindr
    ```
 
 2. **Install dependencies**
@@ -103,29 +102,37 @@ A full-stack, multilingual movie and TV series recommendation platform built wit
 
 ## 🌐 Deployment
 
-### Railway (Backend)
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/deploy)
+### Vercel (Full-Stack)
+[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shashank-V-A/CineFindr)
 
-1. Connect your GitHub repository
-2. Set root directory to `apps/api`
-3. Add PostgreSQL and Redis services
-4. Set environment variables:
-   - `TMDB_API_KEY`
-   - `DATABASE_URL` (auto-provided)
-   - `REDIS_URL` (auto-provided)
-
-### Vercel (Frontend)
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
-
-1. Import from GitHub
+#### Frontend Deployment
+1. Import your GitHub repository to Vercel
 2. Set root directory to `apps/web`
-3. Add environment variable:
-   - `NEXT_PUBLIC_API_URL` (your Railway API URL)
+3. Add environment variables:
+   - `NEXT_PUBLIC_API_URL` (your Vercel API URL)
+   - `TMDB_API_KEY`
+
+#### Backend API Deployment
+1. Create a new Vercel project from the same repository
+2. Set root directory to `apps/api`
+3. Configure build settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+4. Add environment variables:
+   - `TMDB_API_KEY`
+   - `DATABASE_URL` (PostgreSQL connection string)
+   - `REDIS_URL` (Redis connection string, if using)
+   - `NODE_ENV`: `production`
+5. Run database migrations:
+   ```bash
+   npx prisma migrate deploy
+   ```
 
 ## 📁 Project Structure
 
 ```
-movie-recommender/
+CineFindr/
 ├── apps/
 │   ├── api/                 # NestJS Backend
 │   │   ├── src/
@@ -179,14 +186,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Shashank V A**
 - GitHub: [@Shashank-V-A](https://github.com/Shashank-V-A)
-- Portfolio: [Your Portfolio URL]
 
 ## 🙏 Acknowledgments
 
 - [TMDB](https://www.themoviedb.org/) for movie/TV metadata
 - [JustWatch](https://www.justwatch.com/) for streaming provider data
-- [Vercel](https://vercel.com/) for frontend hosting
-- [Railway](https://railway.app/) for backend hosting
+- [Vercel](https://vercel.com/) for full-stack hosting and deployment
 
 ---
 
