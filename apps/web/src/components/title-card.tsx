@@ -33,12 +33,12 @@ export function TitleCard({ title }: TitleCardProps) {
           <div className="aspect-[2/3] relative">
             <Image
               src={posterUrl}
-              alt={title.title || title.originalTitle}
+              alt={title.localizedTitle || title.originalTitle}
               fill
               className="object-cover group-hover:scale-105 transition-transform"
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
             />
-            {title.rating > 0 && (
+            {title.rating && title.rating > 0 && (
               <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1">
                 <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                 <span className="text-xs font-semibold">{title.rating.toFixed(1)}</span>
@@ -47,7 +47,7 @@ export function TitleCard({ title }: TitleCardProps) {
           </div>
           <div className="p-3">
             <h3 className="font-semibold text-sm line-clamp-2">
-              {title.title || title.originalTitle}
+              {title.localizedTitle || title.originalTitle}
             </h3>
             {title.releaseDate && (
               <p className="text-xs text-muted-foreground mt-1">
