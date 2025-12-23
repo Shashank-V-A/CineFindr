@@ -14,10 +14,6 @@ A full-stack, multilingual movie and TV series recommendation platform built wit
 
 ## 🚀 Live Demo
 
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shashank-V-A/CineFindr)
-
-**Live Application**: [https://cinefindr.vercel.app](https://cinefindr.vercel.app)
-
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -101,9 +97,6 @@ A full-stack, multilingual movie and TV series recommendation platform built wit
    ```
 
 ## 🌐 Deployment
-
-### Vercel (Full-Stack)
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shashank-V-A/CineFindr)
 
 #### Frontend Deployment
 1. Import your GitHub repository to Vercel
